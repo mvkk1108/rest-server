@@ -2,11 +2,14 @@ package com.rest.server.entities;
 
 import java.util.Date;
 
+import javax.validation.constraints.Size;
+
 public class Employee {
 	private int empno;
 	private int mgrno;
 	private int jcode;
 	private int deptno;
+	@Size(min = 2,max = 20 , message = "Employee Name should be between 2 to 20 characters")
 	private String empname;
 	private String username;
 	private String password;
